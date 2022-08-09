@@ -13,7 +13,7 @@ public class payload {
     public static String updateUser(){
 
         return "{\n" +
-        "    \"name\": \"Abhishek\",\n" +
+        "    \"name\": \"Ajay\",\n" +
                 "    \"job\": \"Lead\"\n" +
                 "}";
     }
