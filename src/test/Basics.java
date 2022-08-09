@@ -28,9 +28,11 @@ public class Basics {
                 .when().get("api/user/2")
                 .then().log().all().assertThat().statusCode(200);
 
-        given().log().all().header("Connection","keep-alive").header("Content-Type","application/json")
+     String updatedResponse=   given().log().all().header("Connection","keep-alive").header("Content-Type","application/json")
                 .body(payload.updateUser()).when().put("api/users/2")
-                .then().log().all().assertThat().statusCode(200);
+                .then().log().all().assertThat().statusCode(200).body("name",equalTo("Abhishek")).extract().response().asString();
+
+        System.out.println(updatedResponse);
 
 
         given().log().all().header("Connection","keep-alive").header("Content-Type","application/json")
