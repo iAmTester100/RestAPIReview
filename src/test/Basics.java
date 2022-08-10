@@ -30,7 +30,7 @@ public class Basics {
         Assert.assertEquals(realName,responseName);
 
 
-        given().log().all().header("Connection","keep-alive").header("Content-Type","application/json")
+        String getName = given().log().all().header("Connection","keep-alive").header("Content-Type","application/json")
                 .when().get("api/user/2")
                 .then().log().all().assertThat().statusCode(200).extract().response().asString();
 
