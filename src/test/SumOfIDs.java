@@ -2,6 +2,7 @@ package test;
 
 import files.payload;
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SumOfIDs {
@@ -23,6 +24,9 @@ public class SumOfIDs {
 
         }
         System.out.println(sum);
+
+        int total = 42070;
+        Assert.assertEquals(total,sum);
 
 
     }
