@@ -40,6 +40,17 @@ public class JsonPathComplex {
             System.out.println(year);
 
 
+
+        }
+
+        for (int i=0;i<count;i ++){
+
+            String colour = js2.get("data["+i+"].color");
+            if(colour.equalsIgnoreCase("#98B2D1")){
+                String values = js2.get("data["+i+"].pantone_value");
+                System.out.println(values);
+                break;
+            }
         }
 
     }
