@@ -101,4 +101,13 @@ public class payload {
                 "    }\n" +
                 "}";
     }
+
+    public static String addUserDynamic(String name, String position){
+
+        String newUser = "{\n" +
+                "    \"name\": \""+name+"\",\n" +
+                "    \"job\": \""+position+"\"\n" +
+                "}";
+        return newUser;
+    }
 }
