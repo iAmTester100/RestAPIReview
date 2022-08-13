@@ -19,7 +19,7 @@ public class JiraTest {
 
         String firstMessage = "Currently working on root cause analysis";
 
-       String response= given().header("Content-Type","application/json").body("{\"username\": \"neal.bhatt100\", \"password\": \"lightweight500\"}")
+       String response= given().relaxedHTTPSValidation().header("Content-Type","application/json").body("{\"username\": \"neal.bhatt100\", \"password\": \"lightweight500\"}")
                .log().all().filter(session).when()
                .post("rest/auth/1/session").then().log().all().extract().response().asString();
 
