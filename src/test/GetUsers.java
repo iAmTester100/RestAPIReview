@@ -1,12 +1,14 @@
 package test;
 
+import java.util.List;
+
 public class GetUsers {
 
     private int page;
     private int per_page;
     private int total;
     private int total_pages;
-    private GetData data;
+    private List<GetData> data;
     private GetSupport support;
 
     public int getPage() {
@@ -25,7 +27,7 @@ public class GetUsers {
         return total_pages;
     }
 
-    public GetData getData() {
+    public List<GetData> getData() {
         return data;
     }
 
@@ -45,7 +47,7 @@ public class GetUsers {
         this.total_pages = total_pages;
     }
 
-    public void setData(GetData data) {
+    public void setData(List<GetData> data) {
         this.data = data;
     }
 
