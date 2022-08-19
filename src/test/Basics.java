@@ -7,6 +7,8 @@ import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -51,6 +53,25 @@ public class Basics {
             }
 
         }
+
+
+        String [] colours = {"#98B2D1","#C74375","#BF1932","#7BC4C4","#E2583E","#53B0AE"};
+
+        ArrayList <String> array = new ArrayList<String>();
+
+        List<GetData> colour = getPageList.getData();
+        for (int j = 0; j < colour.size(); j++) {
+            array.add(data.get(j).getColor());
+
+            }
+
+       List<String> expectedList = Arrays.asList(colours);
+
+        Assert.assertTrue(array.equals(expectedList));
+
+
+
+
 
 
         String updatedResponse = given().log().all().header("Connection", "keep-alive").header("Content-Type", "application/json")
