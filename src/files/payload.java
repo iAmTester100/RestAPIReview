@@ -5,7 +5,7 @@ public class payload {
     public static String addUser(){
 
         return "{\n" +
-                "    \"name\": \"Abhishek\",\n" +
+                "    \"name\": \"Tester\",\n" +
                 "    \"job\": \"leader\"\n" +
                 "}";
     }
