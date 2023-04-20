@@ -20,11 +20,11 @@ public class Basics {
 
         RestAssured.baseURI = "https://reqres.in/";
 
-        String realName = "Abhishek";
+        String realName = "Tester";
 
         String response = given().log().all().header("Connection", "keep-alive").header("Content-Type", "application/json")
                 .body(payload.addUser()).when().post("api/users")
-                .then().assertThat().statusCode(201).body("name", equalTo("Abhishek")).extract().response().asString();
+                .then().assertThat().statusCode(201).body("name", equalTo("Tester")).extract().response().asString();
 
         System.out.println(response);
 
